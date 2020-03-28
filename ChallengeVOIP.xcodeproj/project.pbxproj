@@ -22,7 +22,6 @@
 		6AA43C43242FD2FB004B0700 /* Item+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C42242FD2FB004B0700 /* Item+CoreDataProperties copy.swift */; };
 		6AA43C45242FD2FD004B0700 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C44242FD2FD004B0700 /* Item+CoreDataClass.swift */; };
 		6AA43C47242FD521004B0700 /* CellItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C46242FD521004B0700 /* CellItems.swift */; };
-		6AA43C49242FD60A004B0700 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C48242FD60A004B0700 /* DetailsView.swift */; };
 		6AFC0C43242FAF6100D6D531 /* DetailsRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFC0C42242FAF6100D6D531 /* DetailsRepositoriesView.swift */; };
 		A91AAC7264BC8923BEA60CB8 /* Pods_ChallengeVOIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF95FA37A97C3C0ACAB144D /* Pods_ChallengeVOIPTests.framework */; };
 		BF7A900287BBF1B371B393D4 /* Pods_ChallengeVOIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8037793F9946D03EAC2B3B /* Pods_ChallengeVOIP.framework */; };
@@ -60,7 +59,6 @@
 		6AA43C42242FD2FB004B0700 /* Item+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
 		6AA43C44242FD2FD004B0700 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Item+CoreDataClass.swift"; path = "/Users/adria.oliveira/Desktop/challengeVOIP/Item+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		6AA43C46242FD521004B0700 /* CellItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItems.swift; sourceTree = "<group>"; };
-		6AA43C48242FD60A004B0700 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		6AFC0C42242FAF6100D6D531 /* DetailsRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRepositoriesView.swift; sourceTree = "<group>"; };
 		6DF95FA37A97C3C0ACAB144D /* Pods_ChallengeVOIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeVOIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD0D9DEDF6B4ADF967005A8 /* Pods-ChallengeVOIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeVOIP.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeVOIP/Pods-ChallengeVOIP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 			children = (
 				6A0B9B2F242F849700E17B1C /* HomeView.swift */,
 				6AFC0C42242FAF6100D6D531 /* DetailsRepositoriesView.swift */,
-				6AA43C48242FD60A004B0700 /* DetailsView.swift */,
 				6A3672C3242EE995006A0007 /* TableView */,
 				6A7EAADF242EDCC9004FE76A /* Assets.xcassets */,
 			);
@@ -409,7 +406,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AFC0C43242FAF6100D6D531 /* DetailsRepositoriesView.swift in Sources */,
-				6AA43C49242FD60A004B0700 /* DetailsView.swift in Sources */,
 				6A618FC3242FBDAD00CB9929 /* PersistenceManager.swift in Sources */,
 				6A3672C7242EE9B2006A0007 /* TableViewDelegate.swift in Sources */,
 				6A7EAAD8242EDCC8004FE76A /* HomeVC.swift in Sources */,

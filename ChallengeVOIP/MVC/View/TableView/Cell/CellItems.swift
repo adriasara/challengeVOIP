@@ -62,8 +62,7 @@ class CellItems: UITableViewCell {
     
     private func layout() {
         
-//        itemLabel.centerVertically()
-//        itemLabel.left(10)
+        stackView.left(5).right(10).bottom(5)
     }
     
     private func setupComponents() {

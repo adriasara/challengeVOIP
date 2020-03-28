@@ -63,7 +63,7 @@ class DetailsRepositoriesView: UIView {
     
     lazy var saveButton: UIButton = {
         let saveButton = UIButton(frame: .zero)
-        saveButton.setTitle("Save", for: .normal)
+//        saveButton.setTitle("Save", for: .normal)
         saveButton.titleLabel?.font = UIFont(name: "Arial-Regular", size: 10.0)
         saveButton.backgroundColor = .clear
         saveButton.imageView?.contentMode = .scaleAspectFit
@@ -146,6 +146,10 @@ class DetailsRepositoriesView: UIView {
             
             self.delegate?.saveOrDeleteItem(text: text)
         }
+    }
+    
+    func setButtonTitle(title: String) {
+        saveButton.setTitle(title, for: .normal)
     }
     
     func setId(id : Int){

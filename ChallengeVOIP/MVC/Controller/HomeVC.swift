@@ -8,19 +8,34 @@
 
 import UIKit
 import Alamofire
+import CoreData
 
 class HomeVC: UIViewController {
     
     var homeView: HomeView = HomeView(frame: .zero)
     var detailRepositoryView: DetailsRepositoriesView = DetailsRepositoriesView(frame: .zero)
     var result = Items()
-    
+    let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
+    var itemsSaved = [Item]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         homeView.delegate = self
         detailRepositoryView.delegate = self
+        
+        do {
+            
+            let item = try PersistenceService.context.fetch(fetchRequest)
+            
+            self.homeView.saveItem(item: item)
+            itemsSaved = item
+            
+        } catch {
+            
+            print("Error")
+        }
         
         request()
     }
@@ -50,8 +65,6 @@ extension HomeVC: ShowViewDelegate {
     
     func chooseView(full_name: String, index: Int) {
         
-        print("http://api.github.com/repos/\(full_name)")
-        
         Alamofire.request("http://api.github.com/repos/\(full_name)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
             
             if let jResult = try? JSONDecoder().decode(Items.self, from: response.data!) {
@@ -61,6 +74,7 @@ extension HomeVC: ShowViewDelegate {
                 self.detailRepositoryView.setId(id: jResult.id ?? 0)
                 self.detailRepositoryView.setFullName(full_name: jResult.full_name ?? "Full Name: ")
                 self.detailRepositoryView.setNodeId(node_id: jResult.node_id ?? "URL : ")
+                self.detailRepositoryView.setButtonTitle(title: "Save")
                 
                 self.view.sv(self.detailRepositoryView)
                 
@@ -80,30 +94,34 @@ extension HomeVC: BackViewDelegate {
     func saveOrDeleteItem(text: String) {
         
         let items = Item(context: PersistenceService.context)
-
-        items.buttonText = text
         
         if text == "Save" {
-            
+
+            self.detailRepositoryView.setButtonTitle(title: "Delete")
+            items.buttonText = "Delete"
+
             if let id = result.id {
-                
+
                 items.id = Int32(id)
             }
-            
+
             if let full_name = result.full_name {
 
                 items.full_name = String(full_name)
             }
-            
+
             if let node_id = result.node_id {
-                
+
                 items.node_id = node_id
             }
-            
+
             PersistenceService.saveContext()
+            self.homeView.reloadCDTableView(item: items)
             
         } else {
             
+            self.detailRepositoryView.setButtonTitle(title: "Save")
+            items.buttonText = "Save"
         }
     }
 }

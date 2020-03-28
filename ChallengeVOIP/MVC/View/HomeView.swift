@@ -14,6 +14,7 @@ class HomeView: UIView {
     private let items = ["First", "Second"]
     private var jsonResult = ItemsModel()
     var delegate: ShowViewDelegate?
+    var itemsResult = [Item]()
     
     private lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: items)
@@ -133,6 +134,18 @@ class HomeView: UIView {
         default:
             break
         }
+    }
+    
+    func saveItem(item: [Item]) {
+        
+        self.itemsResult = item
+        self.tableViewCoreData.reloadData()
+    }
+    
+    func reloadCDTableView(item: Item) {
+        
+        self.tableViewCoreData.reloadData()
+        self.itemsResult.append(item)
     }
     
     func setJSONResult(result : ItemsModel){

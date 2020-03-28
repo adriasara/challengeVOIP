@@ -31,12 +31,13 @@ extension HomeView: UITableViewDataSource {
             let result2 = result()
             
             return result2.items?.count ?? 0
-        } else {
             
-            let items = [Item]()
+        } else if tableView.tag == 2 {
             
-            return items.count
+            return itemsResult.count
         }
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,24 +61,24 @@ extension HomeView: UITableViewDataSource {
             }
             
             return cell
-        } else {
+        } else if tableView.tag == 2 {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellItems.reusableIdentifier, for: indexPath) as? CellItems else { return UITableViewCell() }
-             
-             let items = [Item]()
 
-            cell.setItemId(id: Int(items[indexPath.row].id))
+            cell.setItemId(id: Int(itemsResult[indexPath.row].id))
 
-             if let node_id = items[indexPath.row].node_id {
+             if let node_id = itemsResult[indexPath.row].node_id {
                 cell.setItemNodeID(node_id: node_id)
              }
 
-             if let full_name = items[indexPath.row].full_name {
+             if let full_name = itemsResult[indexPath.row].full_name {
                  cell.setItemFullName(fullName: full_name)
              }
             
             return cell
         }
+        
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -85,21 +86,3 @@ extension HomeView: UITableViewDataSource {
         return 100
     }
 }
-
-//extension DetailsView: UITableViewDelegate {
-//
-//}
-//
-//extension DetailsView: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//        return 10
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellItems.reusableIdentifier, for: indexPath) as? CellItems else { return UITableViewCell() }
-//
-//        return cell
-//    }
-//}

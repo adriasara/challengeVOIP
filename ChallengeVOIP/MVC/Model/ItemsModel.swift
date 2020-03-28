@@ -8,40 +8,12 @@
 
 import UIKit
 
-struct Owner: Codable {
-    
-    var login: String?
-    var id: Int?
-    var url: String?
-    
-    private enum CodingKeys: String, CodingKey {
-        
-        case login = "login"
-        case id = "id"
-        case url = "url"
-    }
-    
-    init() {
-        
-    }
-    
-    init(from decoder: Decoder) throws {
-        
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-
-        login = try? container.decode(String.self, forKey: .login)
-        id = try? container.decode(Int.self, forKey: .id)
-        url = try? container.decode(String.self, forKey: .url)
-    }
-}
-
 struct Items: Codable {
 
     var id: Int?
     var node_id: String?
     var name: String?
     var full_name: String?
-    var owner: [Owner]?
     
     private enum CodingKeys: String, CodingKey {
         
@@ -49,7 +21,6 @@ struct Items: Codable {
         case node_id = "node_id"
         case name = "name"
         case full_name = "full_name"
-        case owner = "owner"
     }
     
     init() {
@@ -64,7 +35,6 @@ struct Items: Codable {
         node_id = try? container.decode(String.self, forKey: .node_id)
         name = try? container.decode(String.self, forKey: .name)
         full_name = try? container.decode(String.self, forKey: .full_name)
-        owner = try? container.decode([Owner].self, forKey: .owner)
     }
 }
 

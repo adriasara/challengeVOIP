@@ -10,7 +10,8 @@
 		6A0B9B2E242F813D00E17B1C /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B9B2D242F813D00E17B1C /* ItemsModel.swift */; };
 		6A0B9B30242F849700E17B1C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B9B2F242F849700E17B1C /* HomeView.swift */; };
 		6A3672C7242EE9B2006A0007 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3672C6242EE9B2006A0007 /* TableViewDelegate.swift */; };
-		6A3672C9242EEA3E006A0007 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3672C8242EEA3E006A0007 /* TableViewCell.swift */; };
+		6A3672C9242EEA3E006A0007 /* CellRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3672C8242EEA3E006A0007 /* CellRepositories.swift */; };
+		6A618FC3242FBDAD00CB9929 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A618FC2242FBDAD00CB9929 /* PersistenceManager.swift */; };
 		6A7EAAD4242EDCC8004FE76A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAAD3242EDCC8004FE76A /* AppDelegate.swift */; };
 		6A7EAAD6242EDCC8004FE76A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAAD5242EDCC8004FE76A /* SceneDelegate.swift */; };
 		6A7EAAD8242EDCC8004FE76A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAAD7242EDCC8004FE76A /* HomeVC.swift */; };
@@ -18,6 +19,11 @@
 		6A7EAAE0242EDCC9004FE76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7EAADF242EDCC9004FE76A /* Assets.xcassets */; };
 		6A7EAAE3242EDCC9004FE76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7EAAE1242EDCC9004FE76A /* LaunchScreen.storyboard */; };
 		6A7EAAEE242EDCCA004FE76A /* ChallengeVOIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAAED242EDCCA004FE76A /* ChallengeVOIPTests.swift */; };
+		6AA43C43242FD2FB004B0700 /* Item+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C42242FD2FB004B0700 /* Item+CoreDataProperties copy.swift */; };
+		6AA43C45242FD2FD004B0700 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C44242FD2FD004B0700 /* Item+CoreDataClass.swift */; };
+		6AA43C47242FD521004B0700 /* CellItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C46242FD521004B0700 /* CellItems.swift */; };
+		6AA43C49242FD60A004B0700 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C48242FD60A004B0700 /* DetailsView.swift */; };
+		6AFC0C43242FAF6100D6D531 /* DetailsRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFC0C42242FAF6100D6D531 /* DetailsRepositoriesView.swift */; };
 		A91AAC7264BC8923BEA60CB8 /* Pods_ChallengeVOIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF95FA37A97C3C0ACAB144D /* Pods_ChallengeVOIPTests.framework */; };
 		BF7A900287BBF1B371B393D4 /* Pods_ChallengeVOIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8037793F9946D03EAC2B3B /* Pods_ChallengeVOIP.framework */; };
 /* End PBXBuildFile section */
@@ -38,7 +44,8 @@
 		6A0B9B2D242F813D00E17B1C /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
 		6A0B9B2F242F849700E17B1C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6A3672C6242EE9B2006A0007 /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
-		6A3672C8242EEA3E006A0007 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6A3672C8242EEA3E006A0007 /* CellRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRepositories.swift; sourceTree = "<group>"; };
+		6A618FC2242FBDAD00CB9929 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		6A7EAAD0242EDCC8004FE76A /* ChallengeVOIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeVOIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7EAAD3242EDCC8004FE76A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A7EAAD5242EDCC8004FE76A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +57,11 @@
 		6A7EAAE9242EDCCA004FE76A /* ChallengeVOIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeVOIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7EAAED242EDCCA004FE76A /* ChallengeVOIPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeVOIPTests.swift; sourceTree = "<group>"; };
 		6A7EAAEF242EDCCA004FE76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AA43C42242FD2FB004B0700 /* Item+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		6AA43C44242FD2FD004B0700 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Item+CoreDataClass.swift"; path = "/Users/adria.oliveira/Desktop/challengeVOIP/Item+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		6AA43C46242FD521004B0700 /* CellItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItems.swift; sourceTree = "<group>"; };
+		6AA43C48242FD60A004B0700 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		6AFC0C42242FAF6100D6D531 /* DetailsRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRepositoriesView.swift; sourceTree = "<group>"; };
 		6DF95FA37A97C3C0ACAB144D /* Pods_ChallengeVOIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeVOIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD0D9DEDF6B4ADF967005A8 /* Pods-ChallengeVOIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeVOIP.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeVOIP/Pods-ChallengeVOIP.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0366B15C83522560CDCEF8 /* Pods-ChallengeVOIP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeVOIP.release.xcconfig"; path = "Target Support Files/Pods-ChallengeVOIP/Pods-ChallengeVOIP.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				6A0B9B2F242F849700E17B1C /* HomeView.swift */,
+				6AFC0C42242FAF6100D6D531 /* DetailsRepositoriesView.swift */,
+				6AA43C48242FD60A004B0700 /* DetailsView.swift */,
 				6A3672C3242EE995006A0007 /* TableView */,
 				6A7EAADF242EDCC9004FE76A /* Assets.xcassets */,
 			);
@@ -151,14 +165,44 @@
 		6A3672C5242EE9A0006A0007 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				6A3672C8242EEA3E006A0007 /* TableViewCell.swift */,
+				6AA43C46242FD521004B0700 /* CellItems.swift */,
+				6A3672C8242EEA3E006A0007 /* CellRepositories.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		6A618FC4242FCF5A00CB9929 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				6A618FC2242FBDAD00CB9929 /* PersistenceManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		6A618FC5242FCF7000CB9929 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				6A3672C0242EE5D6006A0007 /* Model */,
+				6A3672C1242EE5DB006A0007 /* View */,
+				6A3672C2242EE5E0006A0007 /* Controller */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		6A618FC6242FCF7F00CB9929 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6A3672BF242EE5CC006A0007 /* Delegates */,
+				6A618FC4242FCF5A00CB9929 /* Persistence */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		6A7EAAC7242EDCC8004FE76A = {
 			isa = PBXGroup;
 			children = (
+				6AA43C44242FD2FD004B0700 /* Item+CoreDataClass.swift */,
+				6AA43C42242FD2FB004B0700 /* Item+CoreDataProperties copy.swift */,
 				6A7EAAD2242EDCC8004FE76A /* ChallengeVOIP */,
 				6A7EAAEC242EDCCA004FE76A /* ChallengeVOIPTests */,
 				6A7EAAD1242EDCC8004FE76A /* Products */,
@@ -179,10 +223,8 @@
 		6A7EAAD2242EDCC8004FE76A /* ChallengeVOIP */ = {
 			isa = PBXGroup;
 			children = (
-				6A3672C0242EE5D6006A0007 /* Model */,
-				6A3672C1242EE5DB006A0007 /* View */,
-				6A3672C2242EE5E0006A0007 /* Controller */,
-				6A3672BF242EE5CC006A0007 /* Delegates */,
+				6A618FC5242FCF7000CB9929 /* MVC */,
+				6A618FC6242FCF7F00CB9929 /* Settings */,
 				6A7EAAE1242EDCC9004FE76A /* LaunchScreen.storyboard */,
 				6A7EAAE4242EDCC9004FE76A /* Info.plist */,
 				6A7EAADC242EDCC8004FE76A /* ChallengeVOIP.xcdatamodeld */,
@@ -366,12 +408,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AFC0C43242FAF6100D6D531 /* DetailsRepositoriesView.swift in Sources */,
+				6AA43C49242FD60A004B0700 /* DetailsView.swift in Sources */,
+				6A618FC3242FBDAD00CB9929 /* PersistenceManager.swift in Sources */,
 				6A3672C7242EE9B2006A0007 /* TableViewDelegate.swift in Sources */,
 				6A7EAAD8242EDCC8004FE76A /* HomeVC.swift in Sources */,
 				6A7EAAD4242EDCC8004FE76A /* AppDelegate.swift in Sources */,
-				6A3672C9242EEA3E006A0007 /* TableViewCell.swift in Sources */,
+				6A3672C9242EEA3E006A0007 /* CellRepositories.swift in Sources */,
+				6AA43C45242FD2FD004B0700 /* Item+CoreDataClass.swift in Sources */,
+				6AA43C47242FD521004B0700 /* CellItems.swift in Sources */,
 				6A0B9B2E242F813D00E17B1C /* ItemsModel.swift in Sources */,
 				6A0B9B30242F849700E17B1C /* HomeView.swift in Sources */,
+				6AA43C43242FD2FB004B0700 /* Item+CoreDataProperties copy.swift in Sources */,
 				6A7EAAD6242EDCC8004FE76A /* SceneDelegate.swift in Sources */,
 				6A7EAADE242EDCC8004FE76A /* ChallengeVOIP.xcdatamodeld in Sources */,
 			);

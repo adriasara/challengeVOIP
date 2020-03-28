@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  CellRepositories.swift
 //  ChallengeVOIP
 //
 //  Created by Ádria Sara Cardoso de Oliveira on 27/03/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class CellRepositories: UITableViewCell {
     
     private let itemsIdLabel: UILabel = UILabel()
     private let nodeIdLabel: UILabel = UILabel()
@@ -96,7 +96,7 @@ class TableViewCell: UITableViewCell {
     }
 }
 
-extension TableViewCell {
+extension CellRepositories {
     class var reusableIdentifier: String {
         return String(describing: self)
     }

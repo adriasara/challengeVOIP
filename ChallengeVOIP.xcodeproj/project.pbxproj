@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A0B9B2E242F813D00E17B1C /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B9B2D242F813D00E17B1C /* ItemsModel.swift */; };
+		6A0B9B30242F849700E17B1C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B9B2F242F849700E17B1C /* HomeView.swift */; };
+		6A3672C7242EE9B2006A0007 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3672C6242EE9B2006A0007 /* TableViewDelegate.swift */; };
+		6A3672C9242EEA3E006A0007 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3672C8242EEA3E006A0007 /* TableViewCell.swift */; };
+		6A7EAAD4242EDCC8004FE76A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAAD3242EDCC8004FE76A /* AppDelegate.swift */; };
+		6A7EAAD6242EDCC8004FE76A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAAD5242EDCC8004FE76A /* SceneDelegate.swift */; };
+		6A7EAAD8242EDCC8004FE76A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAAD7242EDCC8004FE76A /* HomeVC.swift */; };
+		6A7EAADE242EDCC8004FE76A /* ChallengeVOIP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAADC242EDCC8004FE76A /* ChallengeVOIP.xcdatamodeld */; };
+		6A7EAAE0242EDCC9004FE76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7EAADF242EDCC9004FE76A /* Assets.xcassets */; };
+		6A7EAAE3242EDCC9004FE76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7EAAE1242EDCC9004FE76A /* LaunchScreen.storyboard */; };
+		6A7EAAEE242EDCCA004FE76A /* ChallengeVOIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAAED242EDCCA004FE76A /* ChallengeVOIPTests.swift */; };
+		A91AAC7264BC8923BEA60CB8 /* Pods_ChallengeVOIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF95FA37A97C3C0ACAB144D /* Pods_ChallengeVOIPTests.framework */; };
+		BF7A900287BBF1B371B393D4 /* Pods_ChallengeVOIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8037793F9946D03EAC2B3B /* Pods_ChallengeVOIP.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A7EAAEA242EDCCA004FE76A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A7EAAC8242EDCC8004FE76A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A7EAACF242EDCC8004FE76A;
+			remoteInfo = ChallengeVOIP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2EDB75F0695F727E62CF043C /* Pods-ChallengeVOIPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeVOIPTests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeVOIPTests/Pods-ChallengeVOIPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E8037793F9946D03EAC2B3B /* Pods_ChallengeVOIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeVOIP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A0B9B2D242F813D00E17B1C /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
+		6A0B9B2F242F849700E17B1C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6A3672C6242EE9B2006A0007 /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
+		6A3672C8242EEA3E006A0007 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6A7EAAD0242EDCC8004FE76A /* ChallengeVOIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeVOIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7EAAD3242EDCC8004FE76A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A7EAAD5242EDCC8004FE76A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6A7EAAD7242EDCC8004FE76A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		6A7EAADD242EDCC8004FE76A /* ChallengeVOIP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChallengeVOIP.xcdatamodel; sourceTree = "<group>"; };
+		6A7EAADF242EDCC9004FE76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A7EAAE2242EDCC9004FE76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A7EAAE4242EDCC9004FE76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A7EAAE9242EDCCA004FE76A /* ChallengeVOIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeVOIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7EAAED242EDCCA004FE76A /* ChallengeVOIPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeVOIPTests.swift; sourceTree = "<group>"; };
+		6A7EAAEF242EDCCA004FE76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DF95FA37A97C3C0ACAB144D /* Pods_ChallengeVOIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeVOIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD0D9DEDF6B4ADF967005A8 /* Pods-ChallengeVOIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeVOIP.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeVOIP/Pods-ChallengeVOIP.debug.xcconfig"; sourceTree = "<group>"; };
+		CF0366B15C83522560CDCEF8 /* Pods-ChallengeVOIP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeVOIP.release.xcconfig"; path = "Target Support Files/Pods-ChallengeVOIP/Pods-ChallengeVOIP.release.xcconfig"; sourceTree = "<group>"; };
+		DB8ACDA35A164EB8ACA9F4E4 /* Pods-ChallengeVOIPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeVOIPTests.release.xcconfig"; path = "Target Support Files/Pods-ChallengeVOIPTests/Pods-ChallengeVOIPTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A7EAACD242EDCC8004FE76A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7A900287BBF1B371B393D4 /* Pods_ChallengeVOIP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7EAAE6242EDCCA004FE76A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91AAC7264BC8923BEA60CB8 /* Pods_ChallengeVOIPTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04D6668069AD316DFA5DBBF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDD0D9DEDF6B4ADF967005A8 /* Pods-ChallengeVOIP.debug.xcconfig */,
+				CF0366B15C83522560CDCEF8 /* Pods-ChallengeVOIP.release.xcconfig */,
+				2EDB75F0695F727E62CF043C /* Pods-ChallengeVOIPTests.debug.xcconfig */,
+				DB8ACDA35A164EB8ACA9F4E4 /* Pods-ChallengeVOIPTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		560A99C20C6C174A86510266 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E8037793F9946D03EAC2B3B /* Pods_ChallengeVOIP.framework */,
+				6DF95FA37A97C3C0ACAB144D /* Pods_ChallengeVOIPTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A3672BF242EE5CC006A0007 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				6A7EAAD3242EDCC8004FE76A /* AppDelegate.swift */,
+				6A7EAAD5242EDCC8004FE76A /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		6A3672C0242EE5D6006A0007 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A0B9B2D242F813D00E17B1C /* ItemsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A3672C1242EE5DB006A0007 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A0B9B2F242F849700E17B1C /* HomeView.swift */,
+				6A3672C3242EE995006A0007 /* TableView */,
+				6A7EAADF242EDCC9004FE76A /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6A3672C2242EE5E0006A0007 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A7EAAD7242EDCC8004FE76A /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6A3672C3242EE995006A0007 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				6A3672C5242EE9A0006A0007 /* Cell */,
+				6A3672C4242EE99B006A0007 /* Delegates */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		6A3672C4242EE99B006A0007 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				6A3672C6242EE9B2006A0007 /* TableViewDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		6A3672C5242EE9A0006A0007 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6A3672C8242EEA3E006A0007 /* TableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6A7EAAC7242EDCC8004FE76A = {
+			isa = PBXGroup;
+			children = (
+				6A7EAAD2242EDCC8004FE76A /* ChallengeVOIP */,
+				6A7EAAEC242EDCCA004FE76A /* ChallengeVOIPTests */,
+				6A7EAAD1242EDCC8004FE76A /* Products */,
+				04D6668069AD316DFA5DBBF0 /* Pods */,
+				560A99C20C6C174A86510266 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6A7EAAD1242EDCC8004FE76A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A7EAAD0242EDCC8004FE76A /* ChallengeVOIP.app */,
+				6A7EAAE9242EDCCA004FE76A /* ChallengeVOIPTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A7EAAD2242EDCC8004FE76A /* ChallengeVOIP */ = {
+			isa = PBXGroup;
+			children = (
+				6A3672C0242EE5D6006A0007 /* Model */,
+				6A3672C1242EE5DB006A0007 /* View */,
+				6A3672C2242EE5E0006A0007 /* Controller */,
+				6A3672BF242EE5CC006A0007 /* Delegates */,
+				6A7EAAE1242EDCC9004FE76A /* LaunchScreen.storyboard */,
+				6A7EAAE4242EDCC9004FE76A /* Info.plist */,
+				6A7EAADC242EDCC8004FE76A /* ChallengeVOIP.xcdatamodeld */,
+			);
+			path = ChallengeVOIP;
+			sourceTree = "<group>";
+		};
+		6A7EAAEC242EDCCA004FE76A /* ChallengeVOIPTests */ = {
+			isa = PBXGroup;
+			children = (
+				6A7EAAED242EDCCA004FE76A /* ChallengeVOIPTests.swift */,
+				6A7EAAEF242EDCCA004FE76A /* Info.plist */,
+			);
+			path = ChallengeVOIPTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A7EAACF242EDCC8004FE76A /* ChallengeVOIP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A7EAAF2242EDCCA004FE76A /* Build configuration list for PBXNativeTarget "ChallengeVOIP" */;
+			buildPhases = (
+				6D418C021745A4B952305966 /* [CP] Check Pods Manifest.lock */,
+				6A7EAACC242EDCC8004FE76A /* Sources */,
+				6A7EAACD242EDCC8004FE76A /* Frameworks */,
+				6A7EAACE242EDCC8004FE76A /* Resources */,
+				DD6D87E2F9BCC4C09DAE9992 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChallengeVOIP;
+			productName = ChallengeVOIP;
+			productReference = 6A7EAAD0242EDCC8004FE76A /* ChallengeVOIP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6A7EAAE8242EDCCA004FE76A /* ChallengeVOIPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A7EAAF5242EDCCA004FE76A /* Build configuration list for PBXNativeTarget "ChallengeVOIPTests" */;
+			buildPhases = (
+				F3BD61B84F917D194EB5BD9C /* [CP] Check Pods Manifest.lock */,
+				6A7EAAE5242EDCCA004FE76A /* Sources */,
+				6A7EAAE6242EDCCA004FE76A /* Frameworks */,
+				6A7EAAE7242EDCCA004FE76A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A7EAAEB242EDCCA004FE76A /* PBXTargetDependency */,
+			);
+			name = ChallengeVOIPTests;
+			productName = ChallengeVOIPTests;
+			productReference = 6A7EAAE9242EDCCA004FE76A /* ChallengeVOIPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A7EAAC8242EDCC8004FE76A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Ádria Cardoso";
+				TargetAttributes = {
+					6A7EAACF242EDCC8004FE76A = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					6A7EAAE8242EDCCA004FE76A = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 6A7EAACF242EDCC8004FE76A;
+					};
+				};
+			};
+			buildConfigurationList = 6A7EAACB242EDCC8004FE76A /* Build configuration list for PBXProject "ChallengeVOIP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6A7EAAC7242EDCC8004FE76A;
+			productRefGroup = 6A7EAAD1242EDCC8004FE76A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A7EAACF242EDCC8004FE76A /* ChallengeVOIP */,
+				6A7EAAE8242EDCCA004FE76A /* ChallengeVOIPTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A7EAACE242EDCC8004FE76A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A7EAAE3242EDCC9004FE76A /* LaunchScreen.storyboard in Resources */,
+				6A7EAAE0242EDCC9004FE76A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7EAAE7242EDCCA004FE76A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D418C021745A4B952305966 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChallengeVOIP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD6D87E2F9BCC4C09DAE9992 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeVOIP/Pods-ChallengeVOIP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeVOIP/Pods-ChallengeVOIP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChallengeVOIP/Pods-ChallengeVOIP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3BD61B84F917D194EB5BD9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChallengeVOIPTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A7EAACC242EDCC8004FE76A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A3672C7242EE9B2006A0007 /* TableViewDelegate.swift in Sources */,
+				6A7EAAD8242EDCC8004FE76A /* HomeVC.swift in Sources */,
+				6A7EAAD4242EDCC8004FE76A /* AppDelegate.swift in Sources */,
+				6A3672C9242EEA3E006A0007 /* TableViewCell.swift in Sources */,
+				6A0B9B2E242F813D00E17B1C /* ItemsModel.swift in Sources */,
+				6A0B9B30242F849700E17B1C /* HomeView.swift in Sources */,
+				6A7EAAD6242EDCC8004FE76A /* SceneDelegate.swift in Sources */,
+				6A7EAADE242EDCC8004FE76A /* ChallengeVOIP.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7EAAE5242EDCCA004FE76A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A7EAAEE242EDCCA004FE76A /* ChallengeVOIPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A7EAAEB242EDCCA004FE76A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A7EAACF242EDCC8004FE76A /* ChallengeVOIP */;
+			targetProxy = 6A7EAAEA242EDCCA004FE76A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6A7EAAE1242EDCC9004FE76A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A7EAAE2242EDCC9004FE76A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A7EAAF0242EDCCA004FE76A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6A7EAAF1242EDCCA004FE76A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A7EAAF3242EDCCA004FE76A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD0D9DEDF6B4ADF967005A8 /* Pods-ChallengeVOIP.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChallengeVOIP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = challenge.ChallengeVOIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6A7EAAF4242EDCCA004FE76A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF0366B15C83522560CDCEF8 /* Pods-ChallengeVOIP.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChallengeVOIP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = challenge.ChallengeVOIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6A7EAAF6242EDCCA004FE76A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EDB75F0695F727E62CF043C /* Pods-ChallengeVOIPTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChallengeVOIPTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = challenge.ChallengeVOIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChallengeVOIP.app/ChallengeVOIP";
+			};
+			name = Debug;
+		};
+		6A7EAAF7242EDCCA004FE76A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB8ACDA35A164EB8ACA9F4E4 /* Pods-ChallengeVOIPTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChallengeVOIPTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = challenge.ChallengeVOIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChallengeVOIP.app/ChallengeVOIP";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A7EAACB242EDCC8004FE76A /* Build configuration list for PBXProject "ChallengeVOIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7EAAF0242EDCCA004FE76A /* Debug */,
+				6A7EAAF1242EDCCA004FE76A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A7EAAF2242EDCCA004FE76A /* Build configuration list for PBXNativeTarget "ChallengeVOIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7EAAF3242EDCCA004FE76A /* Debug */,
+				6A7EAAF4242EDCCA004FE76A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A7EAAF5242EDCCA004FE76A /* Build configuration list for PBXNativeTarget "ChallengeVOIPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7EAAF6242EDCCA004FE76A /* Debug */,
+				6A7EAAF7242EDCCA004FE76A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6A7EAADC242EDCC8004FE76A /* ChallengeVOIP.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6A7EAADD242EDCC8004FE76A /* ChallengeVOIP.xcdatamodel */,
+			);
+			currentVersion = 6A7EAADD242EDCC8004FE76A /* ChallengeVOIP.xcdatamodel */;
+			path = ChallengeVOIP.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6A7EAAC8242EDCC8004FE76A /* Project object */;
+}

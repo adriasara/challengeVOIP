@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChallengeVOIP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eEp-pM-JhX">
+                                <rect key="frame" x="10" y="104" width="394" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="j41-NT-bMw"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2J-Rr-DkB">
+                                <rect key="frame" x="10" y="165" width="394" height="697"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z2J-Rr-DkB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6YY-iF-Rh1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z2J-Rr-DkB" secondAttribute="trailing" constant="10" id="GSI-Bz-IA2"/>
+                            <constraint firstItem="eEp-pM-JhX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="WuP-o4-rfN"/>
+                            <constraint firstItem="eEp-pM-JhX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="bWw-c5-oEy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eEp-pM-JhX" secondAttribute="trailing" constant="10" id="joT-VV-Yyc"/>
+                            <constraint firstItem="Z2J-Rr-DkB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ubD-jw-d9l"/>
+                            <constraint firstItem="Z2J-Rr-DkB" firstAttribute="top" secondItem="eEp-pM-JhX" secondAttribute="bottom" constant="30" id="xxs-xT-kAL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="eEp-pM-JhX" id="SZn-Aw-bDL"/>
+                        <outlet property="tableView" destination="RUJ-Ay-KRo" id="NwD-L3-KxL"/>
+                        <outlet property="viewDetails" destination="nFU-Sf-rKD" id="rhu-Ro-ttK"/>
+                        <outlet property="viewTableView" destination="eEK-6P-YL9" id="6W5-vX-Thr"/>
+                        <outlet property="whiteView" destination="Z2J-Rr-DkB" id="UTJ-hQ-Rgj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="eEK-6P-YL9">
+                    <rect key="frame" x="0.0" y="0.0" width="394" height="697"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RUJ-Ay-KRo">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="697"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <prototypes>
+                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="WJw-fK-qcP" customClass="TableViewCell" customModule="ChallengeVOIP" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="28" width="394" height="53.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WJw-fK-qcP" id="oKo-pL-qeP" customClass="TableViewCell" customModule="ChallengeVOIP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="53.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWf-mY-Bom">
+                                                <rect key="frame" x="30" y="16" width="42" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="xWf-mY-Bom" secondAttribute="bottom" constant="5" id="DBT-eJ-pQA"/>
+                                            <constraint firstItem="xWf-mY-Bom" firstAttribute="top" secondItem="oKo-pL-qeP" secondAttribute="topMargin" constant="5" id="Kfw-F6-czb"/>
+                                            <constraint firstItem="xWf-mY-Bom" firstAttribute="leading" secondItem="oKo-pL-qeP" secondAttribute="leadingMargin" constant="10" id="aqb-C6-4UE"/>
+                                        </constraints>
+                                    </tableViewCellContentView>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <outlet property="label" destination="xWf-mY-Bom" id="oeV-7I-5dz"/>
+                                    </connections>
+                                </tableViewCell>
+                            </prototypes>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="RUJ-Ay-KRo" firstAttribute="top" secondItem="eEK-6P-YL9" secondAttribute="top" id="FGm-o4-YCT"/>
+                        <constraint firstItem="Z8I-Yc-xkQ" firstAttribute="bottom" secondItem="RUJ-Ay-KRo" secondAttribute="bottom" id="RC2-sR-qoz"/>
+                        <constraint firstItem="RUJ-Ay-KRo" firstAttribute="leading" secondItem="Z8I-Yc-xkQ" secondAttribute="leading" id="d17-tg-I5w"/>
+                        <constraint firstItem="Z8I-Yc-xkQ" firstAttribute="trailing" secondItem="RUJ-Ay-KRo" secondAttribute="trailing" id="fZx-A9-q4z"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Z8I-Yc-xkQ"/>
+                </view>
+                <view contentMode="scaleToFill" id="nFU-Sf-rKD">
+                    <rect key="frame" x="0.0" y="0.0" width="394" height="697"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntg-2u-Btc">
+                            <rect key="frame" x="144" y="96" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="WvG-8t-QE9"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

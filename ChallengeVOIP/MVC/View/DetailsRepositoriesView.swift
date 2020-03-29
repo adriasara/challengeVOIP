@@ -82,7 +82,7 @@ class DetailsRepositoriesView: UIView {
     
     lazy var backButton: UIButton = {
         let saveButton = UIButton(frame: .zero)
-        saveButton.setTitle("Back", for: .normal)
+        saveButton.setTitle("Voltar", for: .normal)
         saveButton.titleLabel?.font = UIFont(name: "Arial-Regular", size: 10.0)
         saveButton.backgroundColor = .clear
         saveButton.imageView?.contentMode = .scaleAspectFit

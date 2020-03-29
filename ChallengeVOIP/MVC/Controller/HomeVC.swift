@@ -77,17 +77,17 @@ extension HomeVC: ShowViewDelegate {
                         
                         if full_name == self.homeView.resultItems()[i].full_name {
                             
-                            self.detailRepositoryView.setButtonTitle(title: "Delete")
+                            self.detailRepositoryView.setButtonTitle(title: "REMOVER")
                             return
                             
                         } else {
                             
-                            self.detailRepositoryView.setButtonTitle(title: "Save")
+                            self.detailRepositoryView.setButtonTitle(title: "SALVAR")
                         }
                     }
                 } else {
                     
-                    self.detailRepositoryView.setButtonTitle(title: "Save")
+                    self.detailRepositoryView.setButtonTitle(title: "SALVAR")
                 }
             }
         }
@@ -105,10 +105,10 @@ extension HomeVC: BackViewDelegate {
         
         let items = Item(context: PersistenceService.context)
         
-        if text == "Save" {
+        if text == "SALVAR" {
 
-            self.detailRepositoryView.setButtonTitle(title: "Delete")
-            items.buttonText = "Delete"
+            self.detailRepositoryView.setButtonTitle(title: "REMOVER")
+            items.buttonText = "REMOVER"
 
             if let id = result.id {
 
@@ -145,7 +145,7 @@ extension HomeVC: BackViewDelegate {
                     }
                     
                     PersistenceService.saveContext()
-                    self.detailRepositoryView.setButtonTitle(title: "Save")
+                    self.detailRepositoryView.setButtonTitle(title: "SALVAR")
                     
                     return
                 }

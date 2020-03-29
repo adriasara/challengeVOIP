@@ -62,8 +62,7 @@ class CellRepositories: UITableViewCell {
     
     private func layout() {
         
-//        itemLabel.centerVertically()
-//        itemLabel.left(10)
+        stackView.centerVertically().left(10)
     }
     
     private func setupComponents() {

@@ -15,8 +15,7 @@ class HomeVC: UIViewController {
     var homeView: HomeView = HomeView(frame: .zero)
     var detailRepositoryView: DetailsRepositoriesView = DetailsRepositoriesView(frame: .zero)
     var result = Items()
-    let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
-    var itemsSaved = [Item]()
+    var fullName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,30 +24,23 @@ class HomeVC: UIViewController {
         homeView.delegate = self
         detailRepositoryView.delegate = self
         
+        let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
+        
         do {
             
             let item = try PersistenceService.context.fetch(fetchRequest)
-            
             self.homeView.saveItem(item: item)
-            itemsSaved = item
-            print(itemsSaved)
-        } catch {
             
+        } catch {
             print("Error")
         }
         
         request()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        request()
-    }
-    
     func request() {
         
-        Alamofire.request("http://api.github.com/search/repositories?q=language:Swift&sort=stars", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
+        appDelegate.dataRequest = Alamofire.request("http://api.github.com/search/repositories?q=language:Swift&sort=stars", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
             
             if let jResult = try? JSONDecoder().decode(ItemsModel.self, from: response.data!) {
                 
@@ -65,11 +57,12 @@ extension HomeVC: ShowViewDelegate {
     
     func chooseView(full_name: String, index: Int) {
         
-        Alamofire.request("http://api.github.com/repos/\(full_name)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
+        appDelegate.dataRequest = Alamofire.request("http://api.github.com/repos/\(full_name)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
 
             if let jResult = try? JSONDecoder().decode(Items.self, from: response.data!) {
 
                 self.result = jResult
+                self.fullName = full_name
 
                 self.detailRepositoryView.setId(id: jResult.id ?? "ID: ")
                 self.detailRepositoryView.setFullName(full_name: jResult.full_name ?? "Full Name: ")
@@ -133,9 +126,30 @@ extension HomeVC: BackViewDelegate {
             }
 
             PersistenceService.saveContext()
-            self.homeView.reloadCDTableView(item: items)
+            self.homeView.appendItemsTB(item: items)
             
         } else {
+            
+            for i in 0..<homeView.itemsResult.count {
+            
+                if homeView.itemsResult[i].full_name == fullName {
+
+                    PersistenceService.context.delete(homeView.itemsResult[i])
+                    self.homeView.deleteItemsTB(index: i)
+
+                    do {
+                        try PersistenceService.context.save()
+                        
+                    } catch let error as NSError {
+                        print("Error While Deleting Note: \(error.userInfo)")
+                    }
+                    
+                    PersistenceService.saveContext()
+                    self.detailRepositoryView.setButtonTitle(title: "Save")
+                    
+                    return
+                }
+            }
         }
     }
 }

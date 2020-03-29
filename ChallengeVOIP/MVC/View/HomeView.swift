@@ -33,7 +33,7 @@ class HomeView: UIView {
     
     private lazy var viewTableView: UIView = {
         let viewTableView = UIView(frame: .zero)
-        viewTableView.backgroundColor = .red
+        viewTableView.backgroundColor = .white
         return viewTableView
     }()
     
@@ -56,7 +56,7 @@ class HomeView: UIView {
     
     private lazy var viewCoreData: UIView = {
         let viewCoreData = UIView(frame: .zero)
-        viewCoreData.backgroundColor = .systemPink
+        viewCoreData.backgroundColor = .white
         viewCoreData.isHidden = true
         return viewCoreData
     }()
@@ -73,7 +73,6 @@ class HomeView: UIView {
         tableViewCoreData.isUserInteractionEnabled = true
         tableViewCoreData.allowsSelectionDuringEditing = true
         tableViewCoreData.allowsSelection = true
-//        tableViewCoreData.tableFooterView = UIView()
         tableViewCoreData.tag = 2
         return tableViewCoreData
     }()
@@ -137,31 +136,41 @@ class HomeView: UIView {
     }
     
     func saveItem(item: [Item]) {
-        
-        self.itemsResult = item
+
+        if item.count > 0 {
+
+            for i in 0..<item.count {
+                if item[i].full_name != nil && item[i].id != nil {
+                    self.itemsResult.append(item[i])
+                }
+            }
+        } else {
+            
+            self.itemsResult = item
+        }
+
         self.tableViewCoreData.reloadData()
     }
     
-    func reloadCDTableView(item: Item) {
-        
+    func appendItemsTB(item: Item) {
         self.itemsResult.append(item)
         self.tableViewCoreData.reloadData()
-        
-        print(itemsResult)
+    }
+    
+    func deleteItemsTB(index: Int) {
+        self.itemsResult.remove(at: index)
+        self.tableViewCoreData.reloadData()
     }
     
     func resultItems() -> [Item] {
-        
         return itemsResult
     }
     
     func setJSONResult(result : ItemsModel){
-        
         jsonResult = result
     }
     
     func result() -> ItemsModel {
-        
         return jsonResult
     }
 }

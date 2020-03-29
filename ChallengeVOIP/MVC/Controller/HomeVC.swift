@@ -17,7 +17,7 @@ class HomeVC: UIViewController {
     var result = Items()
     let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
     var itemsSaved = [Item]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +31,7 @@ class HomeVC: UIViewController {
             
             self.homeView.saveItem(item: item)
             itemsSaved = item
-            
+            print(itemsSaved)
         } catch {
             
             print("Error")
@@ -66,19 +66,36 @@ extension HomeVC: ShowViewDelegate {
     func chooseView(full_name: String, index: Int) {
         
         Alamofire.request("http://api.github.com/repos/\(full_name)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
-            
+
             if let jResult = try? JSONDecoder().decode(Items.self, from: response.data!) {
-                
+
                 self.result = jResult
-                
-                self.detailRepositoryView.setId(id: jResult.id ?? 0)
+
+                self.detailRepositoryView.setId(id: jResult.id ?? "ID: ")
                 self.detailRepositoryView.setFullName(full_name: jResult.full_name ?? "Full Name: ")
                 self.detailRepositoryView.setNodeId(node_id: jResult.node_id ?? "URL : ")
-                self.detailRepositoryView.setButtonTitle(title: "Save")
-                
+
                 self.view.sv(self.detailRepositoryView)
-                
                 self.detailRepositoryView.fillContainer()
+                
+                if self.homeView.resultItems().count > 0 {
+
+                    for i in 0..<self.homeView.resultItems().count {
+                        
+                        if full_name == self.homeView.resultItems()[i].full_name {
+                            
+                            self.detailRepositoryView.setButtonTitle(title: "Delete")
+                            return
+                            
+                        } else {
+                            
+                            self.detailRepositoryView.setButtonTitle(title: "Save")
+                        }
+                    }
+                } else {
+                    
+                    self.detailRepositoryView.setButtonTitle(title: "Save")
+                }
             }
         }
     }
@@ -102,7 +119,7 @@ extension HomeVC: BackViewDelegate {
 
             if let id = result.id {
 
-                items.id = Int32(id)
+                items.id = id
             }
 
             if let full_name = result.full_name {
@@ -119,9 +136,6 @@ extension HomeVC: BackViewDelegate {
             self.homeView.reloadCDTableView(item: items)
             
         } else {
-            
-            self.detailRepositoryView.setButtonTitle(title: "Save")
-            items.buttonText = "Save"
         }
     }
 }

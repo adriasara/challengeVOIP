@@ -19,7 +19,7 @@
 		6A7EAAE0242EDCC9004FE76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7EAADF242EDCC9004FE76A /* Assets.xcassets */; };
 		6A7EAAE3242EDCC9004FE76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7EAAE1242EDCC9004FE76A /* LaunchScreen.storyboard */; };
 		6A7EAAEE242EDCCA004FE76A /* ChallengeVOIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7EAAED242EDCCA004FE76A /* ChallengeVOIPTests.swift */; };
-		6AA43C43242FD2FB004B0700 /* Item+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C42242FD2FB004B0700 /* Item+CoreDataProperties copy.swift */; };
+		6A84D94A2430E86E0064B53B /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A84D9492430E86E0064B53B /* Item+CoreDataProperties.swift */; };
 		6AA43C45242FD2FD004B0700 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C44242FD2FD004B0700 /* Item+CoreDataClass.swift */; };
 		6AA43C47242FD521004B0700 /* CellItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA43C46242FD521004B0700 /* CellItems.swift */; };
 		6AFC0C43242FAF6100D6D531 /* DetailsRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFC0C42242FAF6100D6D531 /* DetailsRepositoriesView.swift */; };
@@ -56,7 +56,7 @@
 		6A7EAAE9242EDCCA004FE76A /* ChallengeVOIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeVOIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7EAAED242EDCCA004FE76A /* ChallengeVOIPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeVOIPTests.swift; sourceTree = "<group>"; };
 		6A7EAAEF242EDCCA004FE76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AA43C42242FD2FB004B0700 /* Item+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		6A84D9492430E86E0064B53B /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Item+CoreDataProperties.swift"; path = "/Users/adria.oliveira/Desktop/challengeVOIP/Item+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		6AA43C44242FD2FD004B0700 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Item+CoreDataClass.swift"; path = "/Users/adria.oliveira/Desktop/challengeVOIP/Item+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		6AA43C46242FD521004B0700 /* CellItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItems.swift; sourceTree = "<group>"; };
 		6AFC0C42242FAF6100D6D531 /* DetailsRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRepositoriesView.swift; sourceTree = "<group>"; };
@@ -198,8 +198,8 @@
 		6A7EAAC7242EDCC8004FE76A = {
 			isa = PBXGroup;
 			children = (
+				6A84D9492430E86E0064B53B /* Item+CoreDataProperties.swift */,
 				6AA43C44242FD2FD004B0700 /* Item+CoreDataClass.swift */,
-				6AA43C42242FD2FB004B0700 /* Item+CoreDataProperties copy.swift */,
 				6A7EAAD2242EDCC8004FE76A /* ChallengeVOIP */,
 				6A7EAAEC242EDCCA004FE76A /* ChallengeVOIPTests */,
 				6A7EAAD1242EDCC8004FE76A /* Products */,
@@ -410,12 +410,12 @@
 				6A3672C7242EE9B2006A0007 /* TableViewDelegate.swift in Sources */,
 				6A7EAAD8242EDCC8004FE76A /* HomeVC.swift in Sources */,
 				6A7EAAD4242EDCC8004FE76A /* AppDelegate.swift in Sources */,
+				6A84D94A2430E86E0064B53B /* Item+CoreDataProperties.swift in Sources */,
 				6A3672C9242EEA3E006A0007 /* CellRepositories.swift in Sources */,
 				6AA43C45242FD2FD004B0700 /* Item+CoreDataClass.swift in Sources */,
 				6AA43C47242FD521004B0700 /* CellItems.swift in Sources */,
 				6A0B9B2E242F813D00E17B1C /* ItemsModel.swift in Sources */,
 				6A0B9B30242F849700E17B1C /* HomeView.swift in Sources */,
-				6AA43C43242FD2FB004B0700 /* Item+CoreDataProperties copy.swift in Sources */,
 				6A7EAAD6242EDCC8004FE76A /* SceneDelegate.swift in Sources */,
 				6A7EAADE242EDCC8004FE76A /* ChallengeVOIP.xcdatamodeld in Sources */,
 			);

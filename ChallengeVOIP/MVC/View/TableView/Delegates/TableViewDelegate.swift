@@ -18,7 +18,10 @@ extension HomeView: UITableViewDelegate {
       
         let result2 = result()
         
-        self.delegate?.chooseView(full_name: result2.items?[indexPath.row].full_name ?? "", index: indexPath.row)
+        if tableView.tag == 1 {
+            
+            self.delegate?.chooseView(full_name: result2.items?[indexPath.row].full_name ?? "", index: indexPath.row)
+        }
     }
 }
 
@@ -64,9 +67,11 @@ extension HomeView: UITableViewDataSource {
         } else if tableView.tag == 2 {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellItems.reusableIdentifier, for: indexPath) as? CellItems else { return UITableViewCell() }
-
-            cell.setItemId(id: Int(itemsResult[indexPath.row].id))
-
+            
+            if let id = itemsResult[indexPath.row].id {
+                cell.setItemId(id: id)
+            }
+            
              if let node_id = itemsResult[indexPath.row].node_id {
                 cell.setItemNodeID(node_id: node_id)
              }

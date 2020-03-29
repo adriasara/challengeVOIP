@@ -10,7 +10,7 @@ import UIKit
 
 struct Items: Codable {
 
-    var id: Int?
+    var id: String?
     var node_id: String?
     var name: String?
     var full_name: String?
@@ -31,7 +31,12 @@ struct Items: Codable {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        id = try? container.decode(Int.self, forKey: .id)
+        if let value = try? container.decode(Int.self, forKey: .id) {
+            id = String(value)
+        } else {
+            id = try? container.decode(String.self, forKey: .id)
+        }
+        
         node_id = try? container.decode(String.self, forKey: .node_id)
         name = try? container.decode(String.self, forKey: .name)
         full_name = try? container.decode(String.self, forKey: .full_name)

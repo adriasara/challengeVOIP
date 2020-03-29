@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  
 //
-//  Created by Ádria Sara Cardoso de Oliveira on 28/03/20.
+//  Created by Ádria Sara Cardoso de Oliveira on 29/03/20.
 //
 //
 
@@ -17,8 +17,8 @@ extension Item {
     }
 
     @NSManaged public var buttonText: String?
-    @NSManaged public var id: Int32
-    @NSManaged public var node_id: String?
     @NSManaged public var full_name: String?
+    @NSManaged public var id: String?
+    @NSManaged public var node_id: String?
 
 }

@@ -152,8 +152,8 @@ class DetailsRepositoriesView: UIView {
         saveButton.setTitle(title, for: .normal)
     }
     
-    func setId(id : Int){
-        idLabel.text = "ID: \(String(id))"
+    func setId(id : String){
+        idLabel.text = "ID: \(id))"
     }
     
     func setFullName(full_name : String){

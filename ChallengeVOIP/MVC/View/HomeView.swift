@@ -73,7 +73,7 @@ class HomeView: UIView {
         tableViewCoreData.isUserInteractionEnabled = true
         tableViewCoreData.allowsSelectionDuringEditing = true
         tableViewCoreData.allowsSelection = true
-        tableViewCoreData.tableFooterView = UIView()
+//        tableViewCoreData.tableFooterView = UIView()
         tableViewCoreData.tag = 2
         return tableViewCoreData
     }()
@@ -144,11 +144,19 @@ class HomeView: UIView {
     
     func reloadCDTableView(item: Item) {
         
-        self.tableViewCoreData.reloadData()
         self.itemsResult.append(item)
+        self.tableViewCoreData.reloadData()
+        
+        print(itemsResult)
+    }
+    
+    func resultItems() -> [Item] {
+        
+        return itemsResult
     }
     
     func setJSONResult(result : ItemsModel){
+        
         jsonResult = result
     }
     

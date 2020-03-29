@@ -82,8 +82,8 @@ class CellItems: UITableViewCell {
         fullNameLabel.textColor = .black
     }
     
-    func setItemId(id : Int){
-        itemsIdLabel.text = "ID: \(String(id))"
+    func setItemId(id : String){
+        itemsIdLabel.text = "ID: \(id)"
     }
     
     func setItemNodeID(node_id : String){

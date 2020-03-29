@@ -3,7 +3,7 @@
     <entity name="Item" representedClassName="Item" syncable="YES">
         <attribute name="buttonText" optional="YES" attributeType="String"/>
         <attribute name="full_name" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="node_id" optional="YES" attributeType="String"/>
     </entity>
     <elements>

@@ -1,8 +1,9 @@
 //
 //  Item+CoreDataProperties.swift
-//  
+//  ChallengeVOIP
 //
 //  Created by Ádria Sara Cardoso de Oliveira on 29/03/20.
+//  Copyright © 2020 Ádria Cardoso. All rights reserved.
 //
 //
 
@@ -20,5 +21,6 @@ extension Item {
     @NSManaged public var full_name: String?
     @NSManaged public var id: String?
     @NSManaged public var node_id: String?
+    @NSManaged public var url: String?
 
 }

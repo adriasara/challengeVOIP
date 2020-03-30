@@ -57,7 +57,7 @@ extension HomeVC: ShowViewDelegate {
     
     func chooseView(full_name: String, index: Int) {
         
-        appDelegate.dataRequest = Alamofire.request("http://api.github.com/repos/\(full_name)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
+        appDelegate.dataRequest = Alamofire.request("http://api.github.com/repos/\(full_name)/pulls", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
 
             if let jResult = try? JSONDecoder().decode(Items.self, from: response.data!) {
 

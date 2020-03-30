@@ -27,7 +27,7 @@ class HomeView: UIView {
     
     private lazy var whiteView: UIView = {
         let whiteView = UIView(frame: .zero)
-        whiteView.backgroundColor = .blue
+        whiteView.backgroundColor = .white
         return whiteView
     }()
     
@@ -50,6 +50,7 @@ class HomeView: UIView {
         tableViewRepositories.allowsSelectionDuringEditing = true
         tableViewRepositories.allowsSelection = true
         tableViewRepositories.tableFooterView = UIView()
+        tableViewRepositories.backgroundColor = .white
         tableViewRepositories.tag = 1
         return tableViewRepositories
     }()
@@ -74,6 +75,7 @@ class HomeView: UIView {
         tableViewCoreData.allowsSelectionDuringEditing = true
         tableViewCoreData.allowsSelection = true
         tableViewCoreData.tag = 2
+        tableViewCoreData.backgroundColor = .white
         return tableViewCoreData
     }()
     

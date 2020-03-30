@@ -5,8 +5,9 @@
         <attribute name="full_name" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="node_id" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

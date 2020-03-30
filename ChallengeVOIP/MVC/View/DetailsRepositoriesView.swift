@@ -31,6 +31,7 @@ class DetailsRepositoriesView: UIView {
         stackView.distribution = .fill
         stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.backgroundColor = .white
          return stackView
      }()
     
@@ -40,6 +41,7 @@ class DetailsRepositoriesView: UIView {
         idLabel.textAlignment = .left
         idLabel.numberOfLines = 0
         idLabel.textColor = .black
+        idLabel.backgroundColor = .white
         return idLabel
     }()
     
@@ -49,6 +51,7 @@ class DetailsRepositoriesView: UIView {
         fullNameLabel.textAlignment = .left
         fullNameLabel.numberOfLines = 0
         fullNameLabel.textColor = .black
+        fullNameLabel.backgroundColor = .white
         return fullNameLabel
     }()
     
@@ -58,13 +61,14 @@ class DetailsRepositoriesView: UIView {
         nodeIdLabel.textAlignment = .left
         nodeIdLabel.numberOfLines = 0
         nodeIdLabel.textColor = .black
+        nodeIdLabel.backgroundColor = .white
         return nodeIdLabel
     }()
     
     lazy var saveButton: UIButton = {
         let saveButton = UIButton(frame: .zero)
         saveButton.titleLabel?.font = UIFont(name: "Arial-Regular", size: 10.0)
-        saveButton.backgroundColor = .clear
+        saveButton.backgroundColor = .white
         saveButton.imageView?.contentMode = .scaleAspectFit
         saveButton.setTitleColor(.black, for: .normal)
         return saveButton
@@ -77,6 +81,7 @@ class DetailsRepositoriesView: UIView {
         stackViewButtons.distribution = .equalSpacing
         stackViewButtons.spacing = 10
         stackViewButtons.translatesAutoresizingMaskIntoConstraints = false
+        stackViewButtons.backgroundColor = .white
          return stackViewButtons
      }()
     
@@ -84,7 +89,7 @@ class DetailsRepositoriesView: UIView {
         let saveButton = UIButton(frame: .zero)
         saveButton.setTitle("Voltar", for: .normal)
         saveButton.titleLabel?.font = UIFont(name: "Arial-Regular", size: 10.0)
-        saveButton.backgroundColor = .clear
+        saveButton.backgroundColor = .white
         saveButton.imageView?.contentMode = .scaleAspectFit
         saveButton.setTitleColor(.black, for: .normal)
         return saveButton

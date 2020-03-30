@@ -51,6 +51,8 @@ extension HomeView: UITableViewDataSource {
             
             let result2 = result().items?[indexPath.row]
             
+            cell.backgroundColor = .white
+            
             if let id = result2?.id {
                cell.setItemId(id: id)
             }
@@ -67,6 +69,8 @@ extension HomeView: UITableViewDataSource {
         } else if tableView.tag == 2 {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellItems.reusableIdentifier, for: indexPath) as? CellItems else { return UITableViewCell() }
+            
+            cell.backgroundColor = .white
             
             if let id = itemsResult[indexPath.row].id {
                 cell.setItemId(id: id)

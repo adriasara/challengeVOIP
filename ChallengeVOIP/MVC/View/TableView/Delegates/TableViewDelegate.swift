@@ -9,18 +9,18 @@
 import UIKit
 
 protocol ShowViewDelegate {
-    func chooseView(full_name: String, index: Int)
+    func chooseView(id: String, full_name: String, index: Int)
 }
 
 extension HomeView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
-        let result2 = result()
+        let result2 = setItemsResult()
         
         if tableView.tag == 1 {
             
-            self.delegate?.chooseView(full_name: result2.items?[indexPath.row].full_name ?? "", index: indexPath.row)
+            self.delegate?.chooseView(id: result2.items?[indexPath.row].id ?? "", full_name: result2.items?[indexPath.row].full_name ?? "", index: indexPath.row)
         }
     }
 }
@@ -31,7 +31,7 @@ extension HomeView: UITableViewDataSource {
         
         if tableView.tag == 1 {
 
-            let result2 = result()
+            let result2 = setItemsResult()
             
             return result2.items?.count ?? 0
             
@@ -49,7 +49,7 @@ extension HomeView: UITableViewDataSource {
 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellRepositories.reusableIdentifier, for: indexPath) as? CellRepositories else { return UITableViewCell() }
             
-            let result2 = result().items?[indexPath.row]
+            let result2 = setItemsResult().items?[indexPath.row]
             
             cell.backgroundColor = .white
             
@@ -94,4 +94,40 @@ extension HomeView: UITableViewDataSource {
         
         return 100
     }
+}
+
+extension DetailsRepositoriesView: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return pullResult.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellPulls.reusableIdentifier, for: indexPath) as? CellPulls else { return UITableViewCell() }
+
+        cell.backgroundColor = .white
+        
+        let result = pullResult[indexPath.row]
+
+        if let id = result.id {
+            cell.setPullId(id: id)
+        }
+
+        if let url = result.url {
+            cell.setPullURL(url: url)
+        }
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 100
+    }
+}
+
+extension DetailsRepositoriesView: UITableViewDelegate {
+    
 }

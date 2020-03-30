@@ -14,8 +14,10 @@ class HomeVC: UIViewController {
     
     var homeView: HomeView = HomeView(frame: .zero)
     var detailRepositoryView: DetailsRepositoriesView = DetailsRepositoriesView(frame: .zero)
-    var result = Items()
-    var fullName = String()
+    var pullsResult = [PullsModel]()
+    var idItem = String()
+    var indexSelected = Int()
+    var itemsResult = [Items]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +46,8 @@ class HomeVC: UIViewController {
             
             if let jResult = try? JSONDecoder().decode(ItemsModel.self, from: response.data!) {
                 
-                self.homeView.setJSONResult(result: jResult)
+                self.itemsResult = jResult.items ?? [Items]()
+                self.homeView.getItemsResult(result: jResult)
                 self.view.sv(self.homeView)
                 
                 self.homeView.fillContainer()
@@ -55,38 +58,35 @@ class HomeVC: UIViewController {
 
 extension HomeVC: ShowViewDelegate {
     
-    func chooseView(full_name: String, index: Int) {
+    func chooseView(id: String, full_name: String, index: Int) {
         
         appDelegate.dataRequest = Alamofire.request("http://api.github.com/repos/\(full_name)/pulls", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
+                        
+            if let jResult = try? JSONDecoder().decode([PullsModel].self, from: response.data!) {
 
-            if let jResult = try? JSONDecoder().decode(Items.self, from: response.data!) {
-
-                self.result = jResult
-                self.fullName = full_name
-
-                self.detailRepositoryView.setId(id: jResult.id ?? "ID: ")
-                self.detailRepositoryView.setFullName(full_name: jResult.full_name ?? "Full Name: ")
-                self.detailRepositoryView.setNodeId(node_id: jResult.node_id ?? "URL : ")
-
+                self.detailRepositoryView.getPullResult(result: jResult)
+                self.idItem = id
+                self.indexSelected = index
+                
                 self.view.sv(self.detailRepositoryView)
                 self.detailRepositoryView.fillContainer()
-                
+
                 if self.homeView.resultItems().count > 0 {
 
                     for i in 0..<self.homeView.resultItems().count {
-                        
+
                         if full_name == self.homeView.resultItems()[i].full_name {
-                            
+
                             self.detailRepositoryView.setButtonTitle(title: "REMOVER")
                             return
-                            
+
                         } else {
-                            
+
                             self.detailRepositoryView.setButtonTitle(title: "SALVAR")
                         }
                     }
                 } else {
-                    
+
                     self.detailRepositoryView.setButtonTitle(title: "SALVAR")
                 }
             }
@@ -110,17 +110,17 @@ extension HomeVC: BackViewDelegate {
             self.detailRepositoryView.setButtonTitle(title: "REMOVER")
             items.buttonText = "REMOVER"
 
-            if let id = result.id {
-
+            if let id = itemsResult[indexSelected].id {
+    
                 items.id = id
             }
-
-            if let full_name = result.full_name {
+            
+            if let full_name = itemsResult[indexSelected].full_name {
 
                 items.full_name = String(full_name)
             }
 
-            if let node_id = result.node_id {
+            if let node_id = itemsResult[indexSelected].node_id {
 
                 items.node_id = node_id
             }
@@ -132,21 +132,21 @@ extension HomeVC: BackViewDelegate {
             
             for i in 0..<homeView.itemsResult.count {
             
-                if homeView.itemsResult[i].full_name == fullName {
+                if homeView.itemsResult[i].id == idItem {
 
                     PersistenceService.context.delete(homeView.itemsResult[i])
                     self.homeView.deleteItemsTB(index: i)
 
                     do {
                         try PersistenceService.context.save()
-                        
+
                     } catch let error as NSError {
                         print("Error While Deleting Note: \(error.userInfo)")
                     }
-                    
+
                     PersistenceService.saveContext()
                     self.detailRepositoryView.setButtonTitle(title: "SALVAR")
-                    
+
                     return
                 }
             }

@@ -159,20 +159,20 @@ class HomeView: UIView {
         self.tableViewCoreData.reloadData()
     }
     
+    func resultItems() -> [Item] {
+        return itemsResult
+    }
+    
     func deleteItemsTB(index: Int) {
         self.itemsResult.remove(at: index)
         self.tableViewCoreData.reloadData()
     }
     
-    func resultItems() -> [Item] {
-        return itemsResult
-    }
-    
-    func setJSONResult(result : ItemsModel){
+    func getItemsResult(result : ItemsModel){
         jsonResult = result
     }
     
-    func result() -> ItemsModel {
+    func setItemsResult() -> ItemsModel {
         return jsonResult
     }
 }

@@ -2,7 +2,7 @@
 //  Item+CoreDataClass.swift
 //  ChallengeVOIP
 //
-//  Created by Ádria Sara Cardoso de Oliveira on 29/03/20.
+//  Created by Ádria Sara Cardoso de Oliveira on 30/03/20.
 //  Copyright © 2020 Ádria Cardoso. All rights reserved.
 //
 //
